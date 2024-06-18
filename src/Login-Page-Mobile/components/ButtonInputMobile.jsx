@@ -16,7 +16,7 @@ function ButtonInputMobile({label}) {
     const navigate = useNavigate()
 
     const handleClick = () => {
-        navigate('/XYZManager')
+        navigate('/XYZStorage')
     }
 
     return (
