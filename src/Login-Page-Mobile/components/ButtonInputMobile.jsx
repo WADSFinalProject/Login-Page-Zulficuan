@@ -1,4 +1,5 @@
 import { Button} from "@mui/material"
+import { useNavigate } from "react-router-dom"
 
 // eslint-disable-next-line react/prop-types
 function ButtonInputMobile({label}) {
@@ -11,8 +12,15 @@ function ButtonInputMobile({label}) {
             backgroundColor: '#BDD8B0',
         },
     }
+
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        navigate('/XYZManager')
+    }
+
     return (
-        <Button variant="contained" sx={style}>{label}</Button>
+        <Button variant="contained" sx={style} onClick={handleClick}>{label}</Button>
     )
 }
 export default ButtonInputMobile
